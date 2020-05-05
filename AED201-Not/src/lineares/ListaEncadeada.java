@@ -56,6 +56,23 @@ public class ListaEncadeada<T> implements Lista<T> {
 		return -1;
 	}
 
+	public int ultimoIndiceDe(T x) {
+		int ultimoIndice = -1;
+		ItemLista<T> p = primeiro;
+		int contador = 0;
+
+		while (p != null) {
+			if (p.getInfo().equals(x)) {
+				ultimoIndice = contador;
+			}
+
+			p = p.getProx();
+			contador++;
+		}
+
+		return ultimoIndice;
+	}
+	
 	@Override
 	public T retira(int posicao) {
 		if (posicao < 0 || posicao > qtdeElementos) {
@@ -100,6 +117,20 @@ public class ListaEncadeada<T> implements Lista<T> {
 		return resultado + "]";
 	}
 
+	public String imprimeInverso() {
+		String resultado = null;
+		ItemLista<T> atual = primeiro;
+		while (atual != null) {
+			if ( resultado == null) {
+				resultado = atual.getInfo().toString();
+			} else {
+				resultado = atual.getInfo().toString()+ ", " + resultado ;
+			}
+			atual = atual.getProx();
+		}
+		return "[ " + resultado + " ]";
+	}
+	
 	@Override
 	public T busca(int posicao) {
 		if (posicao < 0 || posicao >= qtdeElementos) {
@@ -192,4 +223,6 @@ public class ListaEncadeada<T> implements Lista<T> {
 		return null;
 	}
 
+	
+	
 }
