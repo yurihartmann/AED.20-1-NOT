@@ -34,7 +34,7 @@ public abstract class ArvoreBinariaAbstract<T> {
     @Override
     public String toString() {
     	if (this.vazia()) {
-    		return "";
+    		return "<>";
     	}
     	else {
     		return raiz.imprimePre();
