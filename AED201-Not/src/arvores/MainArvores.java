@@ -33,21 +33,16 @@ public class MainArvores {
 		abc.inserir("djonathan");
 		abc.inserir("saul");
 		abc.inserir("xuxa");
-		System.out.println(abc.toString());
-		
 		System.out.println("Buscado gabriel. Localizado ->" + abc.buscar("gabriel").getInfo());
 		System.out.println("Buscado xuxa. Localizado ->" + abc.buscar("xuxa").getInfo());
 		System.out.println("Buscado marcel. Localizado ->" + abc.buscar("marcel"));
-
-		abc = new ArvoreBST<>();
-
-		abc.inserir("renata");
-		abc.inserir("xuxa");
-		
 		System.out.println(abc.toString());
-		abc.retirar("renata");
+		abc.retirar("felipe");
 		System.out.println(abc.toString());
-		
+		abc.retirar("djonathan");
+		System.out.println(abc.toString());
+		abc.retirar("saul");
+		System.out.println(abc.toString());
 	}
 
 }
