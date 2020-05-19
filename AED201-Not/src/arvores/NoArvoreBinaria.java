@@ -62,13 +62,16 @@ public class NoArvoreBinaria<T> {
 	}
 
 	public String imprimePre() {
+		// trata a raiz
 		String str = "<" + this.info;
+		// vai à esquerda
 		if (esq != null) {
 			str += esq.imprimePre();
 		}
 		else {
 			str += "<>";
 		}
+		// vai à direita
 		if (dir != null) {
 			str += dir.imprimePre();
 		}
@@ -76,5 +79,22 @@ public class NoArvoreBinaria<T> {
 			str += "<>";
 		}
 		return str + ">";
+	}
+	
+	public String imprimeCentral() {
+		String str = "";
+		// vai à esquerda
+		if (esq != null) {
+			str += esq.imprimeCentral();
+		}
+
+		// trata a raiz
+		str += " "+this.info.toString();
+		// vai à direita
+		if (dir != null) {
+			str += dir.imprimeCentral();
+		}
+
+		return str;
 	}
 }

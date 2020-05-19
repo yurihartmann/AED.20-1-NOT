@@ -43,6 +43,28 @@ public class MainArvores {
 		System.out.println(abc.toString());
 		abc.retirar("saul");
 		System.out.println(abc.toString());
+		
+		
+		ArvoreBST<Integer> exemplo = new ArvoreBST<>();
+        
+        exemplo.inserir(63);
+        exemplo.inserir(27);
+        exemplo.inserir(80);
+        exemplo.inserir(13);
+        exemplo.inserir(51);
+        exemplo.inserir(70);
+        exemplo.inserir(92);
+        exemplo.inserir(26);
+        exemplo.inserir(33);
+        exemplo.inserir(58);
+        exemplo.inserir(82);
+        exemplo.inserir(57);
+        exemplo.inserir(60);
+        System.out.println(exemplo.toString());
+        System.out.println(exemplo.toStringOrdered());
+        System.out.println(exemplo.toStringOrdered2());
+        NoArvoreBST<Integer> no = exemplo.buscar(70);
+        System.out.println(exemplo.antecessor(no).getInfo());
 	}
 
 }
