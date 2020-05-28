@@ -13,7 +13,9 @@ public class MainArvoreVeiculos {
 		Veiculo g = new Veiculo("CAO-2890", "C4", 2012, "Kelvin");
 		Veiculo h = new Veiculo("UVA-3939", "BMW", 2015, "Zé");
 		Veiculo i = new Veiculo("OVO-0000", "Gol", 2000, "Joshua");
-				
+		
+		//Veiculo.setComparador(new ComparadorVeiculoModelo());		
+		
 		veiculos.inserir(a);
 		veiculos.inserir(b);
 		veiculos.inserir(c);
